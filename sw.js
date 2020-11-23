@@ -27,26 +27,26 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-454f788f16be4eed4666.js"
+    "url": "webpack-runtime-1fe734ec0f3687c9a347.js"
   },
   {
-    "url": "styles.99f12bbb4968b440c5ab.css"
+    "url": "styles.0510c75bccb9419f3e9e.css"
   },
   {
-    "url": "styles-31f023f48facb69035d3.js"
+    "url": "styles-55e82d6ff5158c00b714.js"
   },
   {
-    "url": "framework-445649399d1c721f1f74.js"
+    "url": "framework-de237a875aa45b276a9d.js"
   },
   {
     "url": "aceecd74-38c0bb2a2e2a311c36b4.js"
   },
   {
-    "url": "app-ff0b04f1921f7af35167.js"
+    "url": "app-5785779218ec637e0924.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "8bf2a7d8029355f8b60dc13f4192f166"
+    "revision": "abe1f2b103f90eb3369c00ca246b1d3e"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-b0556ce5127c1a3e2490.js"
@@ -57,14 +57,14 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "2096dd995d17bc6247100f0814014a64"
+    "revision": "ceafe7e75f8393975a95090a610bc327"
   },
   {
-    "url": "polyfill-6ed41a637bbcdd69b96c.js"
+    "url": "polyfill-f1ea87304f8d1ce6befc.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "99a97e0062e40d58014d66d4dd1987c0"
+    "revision": "33ee418aa486f2a52ae49c16ff67ad43"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -151,12 +151,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/res_pm`), ``)
+  pathname = pathname.replace(new RegExp(`^/wot_shop`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/res_pm/app-ff0b04f1921f7af35167.js`))) {
+  if (!resources || !(await caches.match(`/wot_shop/app-5785779218ec637e0924.js`))) {
     return await fetch(event.request)
   }
 
@@ -169,7 +169,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/res_pm/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/wot_shop/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
