@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://wot-acc.xyz/sitemap.xml
+Host: https://wot-acc.xyz
