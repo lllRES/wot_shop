@@ -42,11 +42,11 @@ self.__precacheManifest = [
     "url": "aceecd74-aaa8ba91a287517d9100.js"
   },
   {
-    "url": "app-34da8105e2871fcd3aab.js"
+    "url": "app-5f327a30514958b3bd4b.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "ab6bae7e029eab305314868bd9591a5d"
+    "revision": "2a17f18d8d25bc5320d9bff59f391ec5"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-ad6431e4664bcf916d19.js"
@@ -57,31 +57,13 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "a071a0fab32b9e6931eb8790a2656083"
+    "revision": "26eee7a5889e4162c243ebf4d8987820"
   },
   {
     "url": "polyfill-2cb897c2a056d28c9332.js"
   },
   {
     "url": "f75ca9e7a5abc04cc9669fbd65c82944fd2ea495-9ae258410a039f6c9356.js"
-  },
-  {
-    "url": "c0b520c78599ab9d2deccb4c2b61af23d8a1ee4e-d57e403f6b3df0c7cfb5.js"
-  },
-  {
-    "url": "component---src-projects-shop-world-of-tanks-components-pages-index-js-268284eada279a845ad2.js"
-  },
-  {
-    "url": "page-data/index/page-data.json",
-    "revision": "dc40d00df86ead0b3165050b305dd4e1"
-  },
-  {
-    "url": "page-data/sq/d/2353285886.json",
-    "revision": "e7d201268b49ac9df30dfd35b1e8f207"
-  },
-  {
-    "url": "page-data/sq/d/859598031.json",
-    "revision": "607ac0533a81369a8036ab4656e3cd2d"
   },
   {
     "url": "component---src-projects-shop-world-of-tanks-components-pages-rules-js-810d2560525cf24f8aa5.js"
@@ -105,11 +87,18 @@ self.__precacheManifest = [
     "revision": "36174ea07b827de5b9e3d32786c7f5e2"
   },
   {
+    "url": "c0b520c78599ab9d2deccb4c2b61af23d8a1ee4e-d57e403f6b3df0c7cfb5.js"
+  },
+  {
     "url": "component---src-projects-shop-world-of-tanks-components-pages-offer-001-js-2414c5f20a5cfc911b08.js"
   },
   {
     "url": "page-data/offer-001/page-data.json",
     "revision": "ebe3e17ee91237c63e9e310ac714ce63"
+  },
+  {
+    "url": "page-data/sq/d/2353285886.json",
+    "revision": "e7d201268b49ac9df30dfd35b1e8f207"
   },
   {
     "url": "component---src-projects-shop-world-of-tanks-components-pages-offer-002-js-6c2d7226066e28161dee.js"
@@ -219,7 +208,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-34da8105e2871fcd3aab.js`))) {
+  if (!resources || !(await caches.match(`/app-5f327a30514958b3bd4b.js`))) {
     return await fetch(event.request)
   }
 
